@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+}
+
+.header--scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-color: rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+}
+
+.header .container {
+  padding: 0 0px;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo .logo {
+  font-size: 28px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.logo__text {
+  color: #000;
+}
+
+.header__nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+.nav__link {
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: #333;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d6fd70;
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+}
+
+.header__actions .btn-primary {
+  background: #d6fd70;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.header__actions .btn-primary:hover {
+  background: #c9f063;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(214, 253, 112, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  /* No contact to hide anymore */
+}
+
+@media (max-width: 768px) {
+  .header {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+  }
+  
+  .nav__list {
+    gap: 24px;
+  }
+  
+  .nav__list li:nth-child(n+4) {
+    display: none;
+  }
+  
+  .header__actions {
+    gap: 16px;
+  }
+  
+  .header__actions .btn-primary {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+  }
+  
+  .header__nav {
+    display: none;
+  }
+}
