@@ -4,6 +4,7 @@ import { Hero } from './components/Hero'
 import { Showcase } from './components/Showcase'
 import { Clients } from './components/Clients'
 import { About } from './components/About'
+import { Strategies } from './components/Strategies'
 import { Features } from './components/Features'
 import { Portfolio } from './components/Portfolio'
 import { Team } from './components/Team'
@@ -20,6 +21,7 @@ function App() {
         <Hero />
         <Showcase />
         <About />
+        <Strategies />
         <Features />
         <Portfolio />
         <Team />
