@@ -19,7 +19,6 @@ function App() {
       <main>
         <Hero />
         <Showcase />
-        <Clients />
         <About />
         <Features />
         <Portfolio />
