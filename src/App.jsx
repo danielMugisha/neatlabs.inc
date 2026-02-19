@@ -22,12 +22,8 @@ function App() {
         <Showcase />
         <About />
         <Strategies />
-        <Features />
-        <Portfolio />
         <Team />
         <Testimonials />
-        <BlogPreview />
-        <BigCTA />
       </main>
       <Footer />
     </div>
