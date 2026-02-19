@@ -76,7 +76,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #d6fd70;
+  background: #d6fd6f;
   transition: width 0.3s ease;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .header__actions .btn-primary {
-  background: #d6fd70;
+  background: #d6fd6f;
   color: #000;
   border: none;
   padding: 12px 24px;

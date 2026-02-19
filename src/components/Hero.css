@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   padding-top: 80px;
-  background: linear-gradient(to bottom, #d6fd70, #f8f7f5);
+  background: linear-gradient(to bottom, #d6fd6f, #f8f7f5);
 }
 
 .hero::before {
@@ -126,7 +126,7 @@
   justify-content: center;
   width: 70px;
   height: 70px;
-  background: #d6fd70;
+  background: #d6fd6f;
   border-radius: 50%;
   position: relative;
 }
