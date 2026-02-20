@@ -36,7 +36,7 @@ export function Features() {
   ];
 
   return (
-    <section className="features">
+    <section id="features" className="features">
       <div className="container">
         <div className="features__header">
           <span className="features-label">We Offer</span>
