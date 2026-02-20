@@ -7,6 +7,7 @@ import { Strategies } from './components/Strategies'
 import { Features } from './components/Features'
 import { Team } from './components/Team'
 import { Testimonials } from './components/Testimonials'
+import { Footer } from './components/Footer'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Team />
         <Testimonials />
       </main>
+      <Footer />
     </div>
   )
 }
