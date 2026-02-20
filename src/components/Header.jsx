@@ -52,7 +52,12 @@ export function Header() {
         <div className="header__content">
           <div className="header__logo">
             <a href="#" className="logo">
-              <span className="logo__text">Neat Labs</span>
+              <img 
+                src="/src/assets/images/logo/Neat_black-removebg-preview.png" 
+                alt="Neat Labs Logo" 
+                className="logo__image"
+              />
+              <span className="logo__text">eat Labs</span>
             </a>
             {!isScrolled && (
               <div className="header__location">

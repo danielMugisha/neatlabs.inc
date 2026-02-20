@@ -44,12 +44,21 @@
 }
 
 .header__logo .logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   font-size: 28px;
   font-weight: 400;
   color: #000;
   text-decoration: none;
   font-family: Inter, Arial, Helvetica, sans-serif;
   letter-spacing: -0.5px;
+}
+
+.logo__image {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo__text {
