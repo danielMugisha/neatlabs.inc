@@ -9,7 +9,7 @@
   display: flex;
   gap: 10px;
   align-items: stretch;
-  max-height: 600px;
+  max-height: 700px;
 }
 
 .showcase__image-left {
@@ -28,7 +28,12 @@
 
 .showcase__image-right {
   width: 60%;
-  position: relative;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -42,9 +47,6 @@
 }
 
 .showcase__card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
   background: #f8f7f5;
   padding: 20px;

@@ -1,6 +1,8 @@
 import './Showcase.css'
-
+import showcaseBg from '../assets/beneath_hero2.webp';
 export function Showcase() {
+
+  
 
   return (
     <section className="showcase">
@@ -8,8 +10,7 @@ export function Showcase() {
         <div className="showcase__image-left">
           <img src="/src/assets/beneath_hero1.webp" alt="Neat Labs Preview 1" />
         </div>
-        <div className="showcase__image-right">
-          <img src="/src/assets/beneath_hero2.webp" alt="Neat Labs Preview 2" />
+        <div className="showcase__image-right" style={{ backgroundImage: `url(${showcaseBg})` }}>
           <div className="showcase__card">
             <div className="showcase__stats">
               <div className="stat-card left-card">
