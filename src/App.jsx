@@ -22,10 +22,11 @@ function App() {
         <Showcase />
         <About />
         <Strategies />
+        <Features />
+        
         <Team />
         <Testimonials />
       </main>
-      <Footer />
     </div>
   )
 }

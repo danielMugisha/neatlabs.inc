@@ -4,24 +4,34 @@ import './Features.css';
 export function Features() {
   const features = [
     {
-      icon: '🎨',
-      title: 'Brand Strategy',
-      description: 'Comprehensive brand identity and positioning that resonates with your target audience.'
+      icon: '💻',
+      title: 'Web Development & Systems',
+      description: 'Custom websites and enterprise systems built with cutting-edge technology to drive your business forward.'
+    },
+    {
+      icon: '🔗',
+      title: 'ERP & POS Integration',
+      description: 'Seamless integration of Enterprise Resource Planning and Point of Sale systems to streamline your operations.'
+    },
+    {
+      icon: '📢',
+      title: 'Brand Advertising',
+      description: 'Strategic brand campaigns that elevate your presence and create lasting connections with your audience.'
     },
     {
       icon: '📱',
-      title: 'Digital Products',
-      description: 'User-centered design and development for web and mobile applications that drive engagement.'
+      title: 'Digital Marketing',
+      description: 'Data-driven digital strategies across all channels to maximize your online reach and ROI.'
     },
     {
-      icon: '⚡',
-      title: 'Performance',
-      description: 'Lightning-fast, optimized experiences that convert visitors into customers.'
+      icon: '🎯',
+      title: 'Field Marketing',
+      description: 'On-ground marketing activations and events that create meaningful brand experiences in real-world settings.'
     },
     {
-      icon: '🚀',
-      title: 'Growth Marketing',
-      description: 'Data-driven strategies to scale your business and maximize ROI across all channels.'
+      icon: '💼',
+      title: 'Business Consultation',
+      description: 'Expert strategic guidance to optimize your business processes and unlock new growth opportunities.'
     }
   ];
 
@@ -29,8 +39,9 @@ export function Features() {
     <section className="features">
       <div className="container">
         <div className="features__header">
-          <span className="section-label">Our Services</span>
-          <h2 className="section-title">Premium solutions for modern brands</h2>
+          <span className="features-label">We Offer</span>
+          <h2 className="section-title features-title">Comprehensive solutions for modern enterprises</h2>
+          <p className="features-desc">From digital transformation to strategic growth, we deliver end-to-end services that propel your business to new heights.</p>
         </div>
         
         <div className="features__grid">
