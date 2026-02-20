@@ -54,12 +54,14 @@ export function Header() {
             <a href="#" className="logo">
               <span className="logo__text">Neat Labs</span>
             </a>
-            <div className="header__location">
-              <svg className="location__icon" width="14" height="14" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#666"/>
-              </svg>
-              <span className="location__text">Kigali, Rwanda</span>
-            </div>
+            {!isScrolled && (
+              <div className="header__location">
+                <svg className="location__icon" width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#666"/>
+                </svg>
+                <span className="location__text">Kigali, Rwanda</span>
+              </div>
+            )}
           </div>
 
           <nav className="header__nav">
@@ -73,34 +75,36 @@ export function Header() {
           </nav>
 
           <div className="header__actions">
-            <div className="language-switcher">
-              <div className="lang-section">
-                <button
-                  className={`lang-btn ${activeLanguage === 'EN' ? 'lang-btn--active' : ''}`}
-                  onClick={() => handleLanguageChange('EN')}
-                >
-                  EN
-                </button>
+            {!isScrolled && (
+              <div className="language-switcher">
+                <div className="lang-section">
+                  <button
+                    className={`lang-btn ${activeLanguage === 'EN' ? 'lang-btn--active' : ''}`}
+                    onClick={() => handleLanguageChange('EN')}
+                  >
+                    EN
+                  </button>
+                </div>
+                <div className="lang-divider"></div>
+                <div className="lang-section">
+                  <button
+                    className={`lang-btn ${activeLanguage === 'FR' ? 'lang-btn--active' : ''}`}
+                    onClick={() => handleLanguageChange('FR')}
+                  >
+                    FR
+                  </button>
+                </div>
+                <div className="lang-divider"></div>
+                <div className="lang-section">
+                  <button
+                    className={`lang-btn ${activeLanguage === 'KIN' ? 'lang-btn--active' : ''}`}
+                    onClick={() => handleLanguageChange('KIN')}
+                  >
+                    KIN
+                  </button>
+                </div>
               </div>
-              <div className="lang-divider"></div>
-              <div className="lang-section">
-                <button
-                  className={`lang-btn ${activeLanguage === 'FR' ? 'lang-btn--active' : ''}`}
-                  onClick={() => handleLanguageChange('FR')}
-                >
-                  FR
-                </button>
-              </div>
-              <div className="lang-divider"></div>
-              <div className="lang-section">
-                <button
-                  className={`lang-btn ${activeLanguage === 'KIN' ? 'lang-btn--active' : ''}`}
-                  onClick={() => handleLanguageChange('KIN')}
-                >
-                  KIN
-                </button>
-              </div>
-            </div>
+            )}
             <button className="btn-primary">
               Start A Project
             </button>
