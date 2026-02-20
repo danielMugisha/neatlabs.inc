@@ -12,10 +12,7 @@ export function Header() {
   ];
 
   const handleLanguageChange = (langCode) => {
-    setActiveLanguage(prevLang => {
-      console.log('Language changing from', prevLang, 'to', langCode);
-      return langCode;
-    });
+    setActiveLanguage(langCode);
   };
 
   useEffect(() => {
@@ -77,22 +74,32 @@ export function Header() {
 
           <div className="header__actions">
             <div className="language-switcher">
-              {languages.map((lang) => (
+              <div className="lang-section">
                 <button
-                  key={lang.code}
-                  className={`lang-btn ${
-                    activeLanguage === lang.code ? 'lang-btn--active' : ''
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    handleLanguageChange(lang.code);
-                  }}
-                  title={lang.name}
+                  className={`lang-btn ${activeLanguage === 'EN' ? 'lang-btn--active' : ''}`}
+                  onClick={() => handleLanguageChange('EN')}
                 >
-                  {lang.code}
+                  EN
                 </button>
-              ))}
+              </div>
+              <div className="lang-divider"></div>
+              <div className="lang-section">
+                <button
+                  className={`lang-btn ${activeLanguage === 'FR' ? 'lang-btn--active' : ''}`}
+                  onClick={() => handleLanguageChange('FR')}
+                >
+                  FR
+                </button>
+              </div>
+              <div className="lang-divider"></div>
+              <div className="lang-section">
+                <button
+                  className={`lang-btn ${activeLanguage === 'KIN' ? 'lang-btn--active' : ''}`}
+                  onClick={() => handleLanguageChange('KIN')}
+                >
+                  KIN
+                </button>
+              </div>
             </div>
             <button className="btn-primary">
               Start A Project
