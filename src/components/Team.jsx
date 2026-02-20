@@ -35,23 +35,6 @@ export function Team() {
   };
 
   useEffect(() => {
-    // Chart card animation
-    gsap.fromTo(chartRef.current, 
-      { scale: 0.8, opacity: 0, y: 50 },
-      {
-        scale: 1,
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: "back.out(1.7)",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-          end: "bottom 30%"
-        }
-      }
-    );
-
     // Team members animation
     gsap.fromTo('.team-member', 
       { opacity: 0, y: 30 },
@@ -75,7 +58,7 @@ export function Team() {
       <div className="team__container">
         {/* Left side with background image and chart card */}
         <div className="team__left" style={{ backgroundImage: `url(${teamBg})` }}>
-          <div className="chart-card" ref={chartRef}>
+          <div className="chart-card animated-chart-card" ref={chartRef}>
             <div className="chart-text">
               <div className="chart-header">
                 <h3 className="chart-title">Skill Levels</h3>
@@ -125,10 +108,12 @@ export function Team() {
                       stroke={item.color}
                       strokeWidth="12"
                       strokeDasharray={circumference}
-                      strokeDashoffset={offset}
+                      strokeDashoffset={circumference}
                       className={`chart-ring ring-${index}`}
                       style={{
-                        animationDelay: `${index * 0.3}s`
+                        '--circumference': circumference,
+                        '--offset': offset,
+                        animationDelay: `${index * 0.3 + 1}s`
                       }}
                     />
                   );
@@ -146,8 +131,15 @@ export function Team() {
         {/* Right side with team content */}
         <div className="team__right">
           <div className="team__header">
-            <span className="section-label">Meet the Team</span>
+            <span className="section-label">The Team</span>
             <h2 className="section-title">Creative minds behind the magic</h2>
+            <p className="team__description">
+              Our diverse team brings together unique perspectives, skills, and experiences to create extraordinary results. We believe that the best solutions emerge when creative minds collaborate, challenge each other, and work toward a shared vision of excellence.
+            </p>
+            <button className="team__button">
+              our team
+              <span className="button-arrow">→</span>
+            </button>
           </div>
           
           <div className="team__grid">
